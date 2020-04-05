@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    
+    <script>
+        var val1 = 0;
+        var val2 = 100;
+
+        function verificaPares(val1, val2) {
+            var pares = [];
+            var contador = val1;
+            var j = 0;
+            for (var i = 0; i <= val2; i++) {
+                if (contador % 2 === 0) {
+                    pares[j] = contador;
+                    j++;
+                }
+                contador++;
+            };
+            return pares;
+        };
+
+        console.log(verificaPares(val1, val2));
+    </script>
+</body>
+</html>

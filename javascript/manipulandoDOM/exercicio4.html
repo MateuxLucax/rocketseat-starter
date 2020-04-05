@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+
+    <input type="text" placeholder="Insira um nome">
+
+    <ul>
+        
+    </ul>
+
+    <script>
+
+        var input = document.querySelector('input'); 
+        input.focus();
+
+        function adicionaNomes(nome) {
+            var nome = input.value;
+            var item = document.createElement('li');
+            item.innerText = nome;
+            document.querySelector('ul').appendChild(item);
+            input.value = '';
+            input.focus();
+        };
+        
+        input.addEventListener("keydown", function(event) {
+
+            if (event.keyCode === 13) {
+                adicionaNomes();
+            }
+
+        });
+
+    </script>
+</body>
+</html>
